@@ -17,4 +17,4 @@ Cypress.on('uncaught:exception', () => false);
 
 // Import commands.js using ES2015 syntax:
 import './commands'
-import "../customCommands/home.commands"
+import "../commands/amazon/home.commands"
