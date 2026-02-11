@@ -1,3 +1,9 @@
 {
-    "amazonUrl": "https://www.amazon.de/"
+    "amazonUrl": "https://www.amazon.de/",
+    "languages": {
+    "DE": {
+      "code": "de-DE",
+      "errorText": "Sieht so aus, als wärst du neu bei Amazon"
+    }
+  }
 }

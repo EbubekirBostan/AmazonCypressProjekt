@@ -12,3 +12,8 @@ Cypress.Commands.add("hoverAccountMenu",()=>{
 Cypress.Commands.add("clickSignInLink",()=>{
         home.clickSignInLink();
 })
+Cypress.Commands.add("setLanguage",()=>{
+         cy.fixture("amazon/home.data").then((data)=>{
+        home.setLanguage(data.languages.DE.code)
+    })
+})

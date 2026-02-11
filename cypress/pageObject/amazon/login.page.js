@@ -13,6 +13,15 @@ class LoginPage{
     verifyLoginSuccess(){
         cy.get(amazonSelectors.accountLinks).should("contain", "Hallo, Mkemal");
     }
+    verifyLoginError() {
+    cy.get(loginSelectors.textLoginNeuBenutzer)
+  .should("be.visible")
+  .invoke("text")
+  .then((text) => {
+    expect(text.trim()).to.include("Sign in");
+  });
+
+  }
 
 
 

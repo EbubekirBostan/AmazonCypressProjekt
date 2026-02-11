@@ -1,11 +1,14 @@
 export const amazonSelectors = {
   rejectCookies: "span[data-action='banner-reject-all']",
   accountLinks: "#nav-link-accountList",
-  signInLink:".nav-action-signin-button"
+  signInLink:".nav-action-signin-button",
+  linkSprache: ".icp-nav-link-inner",
+  deutschSprache: "input[value='de_DE']"
 };
 export const loginSelectors = {
-    inputEmail: "#ap_email_login",
+    inputEmail: "input[name='email']",
     buttonContinue:"#continue",
-    inputPassword: "#ap_password",
-    buttonSignIn: "signInSubmit"
+    inputPassword: "[name='password']",
+    buttonSignIn: "#signInSubmit",
+    textLoginNeuBenutzer: ".a-size-medium-plus"
 }

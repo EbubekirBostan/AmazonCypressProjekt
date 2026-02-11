@@ -9,6 +9,12 @@ class HomePage {
         cy.get(amazonSelectors.rejectCookies).click();
         
     }
+    setLanguage(languageCode) {
+    cy.get(amazonSelectors.linkSprache).click();
+    cy.contains('label', 'Deutsch').click()
+
+}
+
 
     hoverAccountMenu(){
         cy.get(amazonSelectors.accountLinks).trigger('mouseover');

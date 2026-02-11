@@ -1,4 +1,8 @@
 {
-    "invalidEmail": "bekir@alternativkraft.com",
-    "invalidPassword": "12345678"
-  }
+  "invalidEmails": [
+    "bosebubekir@gmail.com",
+    "bostanebubekirdessau@gmail.com",
+    "bosebubekir@outlook.com"
+  ],
+  "invalidPassword": "12345678"
+}
