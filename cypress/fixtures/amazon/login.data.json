@@ -1,8 +1,13 @@
 {
   "invalidEmails": [
-    "bosebubekir@gmail.com",
-    "bostanebubekirdessau@gmail.com",
-    "bosebubekir@outlook.com"
+    "invalidemail",
+    "test@",
+    "test@gmail",
+    " "    
   ],
-  "invalidPassword": "12345678"
+  "invalidPassword": "12345678",
+  "errorMessages": [
+    "We cannot find an account with that e-mail address",
+    "Looks like you're new to Amazon"
+  ]
 }

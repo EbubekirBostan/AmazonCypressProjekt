@@ -11,17 +11,38 @@ class LoginPage{
         cy.get(loginSelectors.buttonSignIn).click();
     }
     verifyLoginSuccess(){
-        cy.get(amazonSelectors.accountLinks).should("contain", "Hallo, Mkemal");
-    }
-    verifyLoginError() {
-    cy.get(loginSelectors.textLoginNeuBenutzer)
-  .should("be.visible")
-  .invoke("text")
-  .then((text) => {
-    expect(text.trim()).to.include("Sign in");
-  });
+         cy.url().should("not.include", "/ap/signin");
 
-  }
+  cy.get("#nav-link-accountList")
+    .should("contain", "Hallo");
+
+  cy.get("#nav-link-accountList")
+    .trigger("mouseover");
+
+  cy.get("#nav-item-signout")
+    .should("exist");
+    }
+    verifyLoginFailed() {
+
+            // Error state
+            cy.get("body").then(($body) => {
+
+             const hasInvalidFormat =
+             $body.find(".a-alert-content").length > 0;
+
+             const hasIntentConfirmation =
+             $body.find("#intent-confirmation-container").length > 0;
+
+             expect(
+                 hasInvalidFormat || hasIntentConfirmation,
+                 "Login sollte fehlschlagen"
+                ).to.be.true;
+
+        });
+
+ 
+}
+
 
 
 

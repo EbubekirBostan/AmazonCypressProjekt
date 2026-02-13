@@ -9,7 +9,7 @@ describe('Amazon Login Test', () => {
     beforeEach(() => {
     cy.navigateToAmazon();
     cy.rejectAmazonCookies();
-    cy.setLanguage();
+ 
    
   });
 
